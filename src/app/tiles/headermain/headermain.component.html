@@ -1,0 +1,17 @@
+<div class="headermain bg-primary">
+  <h2 class="container mb-0 d-flex align-items-center">
+    <div class="row w-100">
+      <div class="logo pb-3 pt-3 d-flex align-items-center flex-grow-1">
+        <span class="logoimage d-flex"><i class="fa fa-graduation-cap"></i></span>
+        <span class="logotext d-flex flex-column ml-2">
+          <span class="logoname text-monospace font-weight-bold">ALRICH</span>
+          <span class="slogan text-white">Take control of your career for serious</span>
+        </span>
+      </div>
+      <ul class="list-inline text-white flex-grow-1 d-flex justify-content-end m-0 align-items-center ">
+        <li class="list-inline-item pr-3 pl-3 pointer" *ngFor="let menuItem of menu">{{menuItem}}</li>
+      </ul>
+    </div>
+  </h2>
+  <app-headersearch></app-headersearch>
+</div>

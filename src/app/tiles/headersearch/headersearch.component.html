@@ -1,0 +1,22 @@
+<div class="container pt-5 pl-5 pr-5">
+    <div class="coursecontainer d-flex slign-items-center justify-content-center">
+      <a class="course pointer d-flex align-items-center">COURSE</a>
+      <span class="searchbtn">
+        <input type="text" class="w-100 border-0" placeholder="Enter Any Course or Keyword">
+      </span>
+    </div>
+    <h2 class="slogantext pt-4 text-white text-center mb-0 pb-2">CHOOSE YOUR COURSE WISELY, INVEST IN LEARNING, BOOST YOUR CAREER!!!</h2>
+    <div class="options pt-3 d-flex justify-content-center">
+      <button type="button" class="btn btn-success m-2 featured">FEATURED COURSES</button>
+      <button type="button" class="btn btn-warning m-2 free">SIGNUP FOR FREE COURSES</button>
+    </div>
+  </div>
+  <div class="cardcontainer container d-flex mt-3">
+    <div class="card bg-white" *ngFor="let card of cards">
+      <span class="imgcontainer"><img src="assets/{{card.image}}" class="card-img-top {{card.class}}" alt="{{card.image}}"></span>
+      <div class="card-body">
+        <h5 class="card-title {{card.header}}">{{card.course}}</h5>
+        <p class="card-text text-black-50">{{card.description}}</p>
+      </div>
+    </div>
+  </div>

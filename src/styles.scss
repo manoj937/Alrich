@@ -1,0 +1,238 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.min.css";
+
+$primary: #007bff;
+$warning: #ffc107;
+$success: #28a745;
+$yellow: #ffeb3b;
+$white: #ffffff;
+
+$primary-cerulean: #2FA4E7;
+$warning-cerulean:#DD5600;
+$success-cerulean:#73A839;
+
+$primary-cosmo: #2780E3;
+$warning-cosmo:#FF7518;
+$success-cosmo:#3FB618;
+
+$primary-cyborg: #2A9FD6;
+$warning-cyborg:#FF8800;
+$success-cyborg:#77B300;
+
+$primary-darkly: #375a7f;
+$warning-darkly:#F39C12;
+$success-darkly:#00bc8c;
+
+$primary-flatly: #2C3E50;
+$warning-flatly:#F39C12;
+$success-flatly:#18BC9C;
+
+$primary-journal: #EB6864;
+$warning-journal:#F5E625;
+$success-journal:#22B24C;
+
+$primary-litera: #4582EC;
+$warning-litera:#f0ad4e;
+$success-litera:#02B875;
+
+$primary-lumen: #158CBA;
+$warning-lumen:#FF851B;
+$success-lumen:#28B62C;
+
+$primary-lux: #1a1a1a;
+$warning-lux:#f0ad4e;
+$success-lux:#4BBF73;
+
+$primary-materia: #2196F3;
+$warning-materia:#ff9800;
+$success-materia:#4CAF50;
+
+$primary-minty: #78C2AD;
+$warning-minty:#FFCE67;
+$success-minty:#56CC9D;
+
+$primary-pulse: #593196;
+$warning-pulse:#EFA31D;
+$success-pulse:#13B955;
+
+$primary-sandstone: #325D88;
+$warning-sandstone:#F47C3C;
+$success-sandstone:#93C54B;
+
+$primary-simplex: #D9230F;
+$warning-simplex:#9B479F;
+$success-simplex:#469408;
+
+$primary-sketchy: #333;
+$warning-sketchy:#ffc107;
+$success-sketchy:#28a745;
+
+$primary-slate: #3A3F44;
+$warning-slate:#f89406;
+$success-slate:#62c462;
+
+$primary-solar: #B58900;
+$warning-solar:#CB4B16;
+$success-solar:#2AA198;
+
+$primary-spacelab: #446E9B;
+$warning-spacelab:#D47500;
+$success-spacelab:#3CB521;
+
+$primary-superhero: #DF691A;
+$warning-superhero:#f0ad4e;
+$success-superhero:#5cb85c;
+
+$primary-united: #E95420;
+$warning-united:#EFB73E;
+$success-united:#38B44A;
+
+$primary-yeti: #008cba;
+$warning-yeti:#E99002;
+$success-yeti:#43ac6a;
+
+@mixin header($color, $logo, $warn, $succ) {
+    .headertop, footer{
+        background: darken( $color, 4% );
+        .textw{
+            font-weight: 600;
+        }
+        .socialmedia{
+            &:hover{
+                background: darken( $color, 7% );
+            }
+        }
+    }
+    .course{
+        background: $logo;
+        &:hover{
+            background-color: darken( $logo, 15% ) !important;
+        }
+    }
+    .logoimage, .logoname{
+        color: $logo;
+    }
+    .btn-warning{
+        background-color: $warn;
+        border:none;
+        &:hover, &:active, &:focus{
+            background-color: darken( $warn, 15% ) !important;
+            border:none;
+            box-shadow: none;
+        }
+    }
+    .btn-success{
+        background-color: darken( $succ, 10% );
+        border:none;
+        &:hover, &:active, &:focus{
+            background-color: darken( $succ, 15% );
+            border:none;
+            box-shadow: none;
+        }
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.loader{
+    top: 0;
+    height: 100%;
+    background: $white;
+}
+
+.none{
+    display: none;
+}
+
+.default{
+    @include header($primary, $yellow, $warning, $success);
+}
+
+.cerulean{
+    @include header($primary-cerulean, $yellow, $warning-cerulean, $success-cerulean);
+}
+
+.cosmo{
+    @include header($primary-cosmo, $yellow, $warning-cosmo, $success-cosmo);
+}
+
+.cyborg{
+    @include header($primary-cyborg, $yellow, $warning-cyborg, $success-cyborg);
+}
+
+.darkly{
+    @include header($primary-darkly, $yellow, $warning-darkly, $success-darkly);
+}
+
+.flatly{
+    @include header($primary-flatly, $yellow, $warning-flatly, $success-flatly);
+}
+
+.journal{
+    @include header($primary-journal, $yellow, $warning-journal, $success-journal);
+}
+
+.litera{
+    @include header($primary-litera, $yellow, $warning-litera, $success-litera);
+}
+
+.lumen{
+    @include header($primary-lumen, $yellow, $warning-lumen, $success-lumen);
+}
+
+.lux{
+    @include header($primary-lux, $yellow, $warning-lux, $success-lux);
+    .slogan{
+        font-size: 0.6rem !important;
+    }
+}
+
+.materia{
+    @include header($primary-materia, $yellow, $warning-materia, $success-materia);
+}
+
+.minty{
+    @include header($primary-minty, $yellow, $warning-minty, $success-minty);
+}
+
+.pulse{
+    @include header($primary-pulse, $yellow, $warning-pulse, $success-pulse);
+}
+
+.sandstone{
+    @include header($primary-sandstone, $yellow, $warning-sandstone, $success-sandstone);
+}
+
+.simplex{
+    @include header($primary-simplex, $yellow, $warning-simplex, $success-simplex);
+}
+
+.sketchy{
+    @include header($primary-sketchy, $yellow, $warning-sketchy, $success-sketchy);
+}
+
+.slate{
+    @include header($primary-slate, $yellow, $warning-slate, $success-slate);
+}
+
+.solar{
+    @include header($primary-solar, $yellow, $warning-solar, $success-solar);
+}
+
+.spacelab{
+    @include header($primary-spacelab, $yellow, $warning-spacelab, $success-spacelab);
+}
+
+.superhero{
+    @include header($primary-superhero, $yellow, $warning-superhero, $success-superhero);
+}
+
+.united{
+    @include header($primary-united, $yellow, $warning-united, $success-united);
+}
+
+.yeti{
+    @include header($primary-yeti, $yellow, $warning-yeti, $success-yeti);
+}
